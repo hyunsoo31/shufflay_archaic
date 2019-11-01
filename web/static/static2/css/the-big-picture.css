@@ -1,0 +1,46 @@
+/*!
+ * Start Bootstrap - The Big Picture (https://startbootstrap.com/template-overviews/the-big-picture)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-the-big-picture/blob/master/LICENSE)
+ */
+/*
+body {
+  background: url(../img/파리.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  transition: all .35s;
+}*/
+/*
+body:active{
+  background: url(../img/루브르.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}*/
+/*
+.home-title{
+    color: #cad3dd;
+    font-size: 100px;
+    font-family: 'East Sea Dokdo', cursive;
+}*/
+.home-content{
+    color: #ffffff;
+    font-size: 70px;
+    margin-top: 150px;
+    text-align: center;
+    font-family: 'Yeon Sung', cursive;
+}
+.home-content:hover{
+    color: #cded6b;
+    font-size: 70px;
+    margin-top: 150px;
+    text-align: center;
+    font-family: 'Yeon Sung', cursive;
+}
+.home-content2{
+    margin-top: 150px;
+    text-align: center;
+}

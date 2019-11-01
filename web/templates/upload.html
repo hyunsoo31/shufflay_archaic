@@ -1,0 +1,285 @@
+{% extends "index.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+<div style = "width:100%; height:50px; background-color:black;">
+</div>
+<body>
+    <!-- header -->
+    <div class="jumbotron text-center bgm-title" style="width: 100%; height: 400px; background-color: #141414; margin-bottom:0px; text-align:left; padding-left:100px;">
+        <h1 style="font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif; color: white; font-weight: bold; font-size: 55px; padding-left:140px;">당신이 가진,</h1>
+        <h1 style="font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif; color: white; font-weight: bold; font-size: 70px;">저작권 FREE 자료를</h1>
+        <h1 style="font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif; color: white; font-weight: bold; font-size: 40px; padding-left:140px;">자유 롭게 공유하세요</h1>
+        <p></p>
+    </div>
+
+<script>
+
+function delete_info(obj) {
+   // 삭제할 ID 정보 찾기
+   var target = obj.parentNode.parentNode;
+   // 삭제할 element 찾기
+   target.parentNode.removeChild(target);
+}
+</script>
+<div class="panel-heading">
+    <h1 class="panel-title" style="font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif; color: black; font-weight: bold; font-size: 55px; text-align:center; margin-bottom: 100px; margin-top:80px;">업로드 파일 목록</h1>
+        <!-- List of uploaded documents -->
+        {% if documents %}
+            <ul>
+             {% for document in documents %}
+                <div class="container" style="background-color:white;">
+                <div class="bgm-container-content" style="background-color:white;">
+                <div class="bgmlist">
+                <li class="uploaded-files">
+                    <a href="{{document.docfile.url}}" download style="color:black;">{{document.docfile.name}}</a>
+                    <!--
+                       <div class="delete_box">
+                         <button onclick="delete_info(this)" style="font-size:70%"> X </button>
+                       </div>
+                       -->
+                </li>
+                </div>
+                </div>
+                </div>
+
+             {% endfor %}
+            </ul>
+            {% else %}
+                <p>No documents.</p>
+            {% endif %}
+</div>
+<style>
+
+#id_docfile{
+    font-size: 10px;
+}
+
+
+
+
+</style>
+<div class="panel-body">
+    <!--Upload form. Note enctype attribute! -->
+    <form action="" method="post" enctype="multipart/form-data" style="text-align: center;">
+        {% csrf_token %}
+        <p>{{form.non_field_error}}</p>
+        <p>{{form.docfile.label_tag}} {{form.docfile.help_text}}</p>
+        <p class="btn btn-primary btn-xl page-scroll" style="margin-top:0px;">
+            {{form.docfile.errors}}
+            {{form.docfile}}
+        </p>
+        <p><input class="btn btn-primary btn-xl page-scroll" style="margin-top:20px; font-size:50px;" type="submit" value="Upload"> </p>
+    </form>
+</div>
+    <!-- content -->
+<!--
+<table id="products" border="1">
+    <caption>product list
+        <form action="" id="setRows">
+            <p>
+                showing
+                <input type="text" name="rowPerPage" value="10">
+                item per page
+            </p>
+        </form>
+
+    </caption>
+
+    <thead>
+        <tr>
+            <th>No</th>
+            <th>Category</th>
+            <th>Product</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Clothing</td>
+            <td>Jacket</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>life</td>
+            <td>dish</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Clothing</td>
+            <td>shocks</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Clothing</td>
+            <td>sports</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>shoes</td>
+            <td>nike</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>shoes</td>
+            <td>addidas</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Bags</td>
+            <td>backpack</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Clothing</td>
+            <td>Jacket</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>shoes</td>
+            <td>bonie</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>Clothing</td>
+            <td>Jacket</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>Clothing</td>
+            <td>Jacket</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>Clothing</td>
+            <td>Jacket</td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>Clothing</td>
+            <td>Jacket</td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>Clothing</td>
+            <td>Jacket</td>
+        </tr>
+    </tbody>
+
+</table>
+
+
+    <style>
+
+
+    form {
+    width: 500px;
+}
+table {
+    border-collapse:collapse;
+    margin-bottom: 10px;
+}
+th, td {
+    padding: 3px 10px;
+}
+.off-screen {
+    display: none;
+}
+#nav {
+    width: 500px;
+    text-align: center;
+}
+#nav a {
+    display: inline-block;
+    padding: 3px 5px;
+    margin-right: 10px;
+    font-family:Tahoma;
+    background: #ccc;
+    color: #000;
+    text-decoration: none;
+}
+#nav a.active {
+    background: #333;
+    color: #fff;
+}
+ </style>
+    <script>
+        var $setRows = $('#setRows');
+
+$setRows.submit(function (e) {
+    e.preventDefault();
+    var rowPerPage = $('[name="rowPerPage"]').val() * 1;// 1 을  곱하여 문자열을 숫자형로 변환
+
+//      console.log(typeof rowPerPage);
+
+    var zeroWarning = 'Sorry, but we cat\'t display "0" rows page. + \nPlease try again.'
+    if (!rowPerPage) {
+        alert(zeroWarning);
+        return;
+    }
+    $('#nav').remove();
+    var $products = $('#products');
+
+    $products.after('<div id="nav">');
+
+
+    var $tr = $($products).find('tbody tr');
+    var rowTotals = $tr.length;
+//  console.log(rowTotals);
+
+    var pageTotal = Math.ceil(rowTotals/ rowPerPage);
+    var i = 0;
+
+    for (; i < pageTotal; i++) {
+        $('<a href="#"></a>')
+                .attr('rel', i)
+                .html(i + 1)
+                .appendTo('#nav');
+    }
+
+    $tr.addClass('off-screen')
+            .slice(0, rowPerPage)
+            .removeClass('off-screen');
+
+    var $pagingLink = $('#nav a');
+    $pagingLink.on('click', function (evt) {
+        evt.preventDefault();
+        var $this = $(this);
+        if ($this.hasClass('active')) {
+            return;
+        }
+        $pagingLink.removeClass('active');
+        $this.addClass('active');
+
+        // 0 => 0(0*4), 4(0*4+4)
+        // 1 => 4(1*4), 8(1*4+4)
+        // 2 => 8(2*4), 12(2*4+4)
+        // 시작 행 = 페이지 번호 * 페이지당 행수
+        // 끝 행 = 시작 행 + 페이지당 행수
+
+        var currPage = $this.attr('rel');
+        var startItem = currPage * rowPerPage;
+        var endItem = startItem + rowPerPage;
+
+        $tr.css('opacity', '0.0')
+                .addClass('off-screen')
+                .slice(startItem, endItem)
+                .removeClass('off-screen')
+                .animate({opacity: 1}, 300);
+
+    });
+
+    $pagingLink.filter(':first').addClass('active');
+
+});
+
+
+$setRows.submit();
+    </script>
+
+-->
+    <!-- footer -->
+
+</body>
+{% endblock content %}

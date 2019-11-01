@@ -1,0 +1,72 @@
+{% extends "index.html" %}
+{% load staticfiles %}
+
+{% block content %}
+<link rel="stylesheet" href='{% static "css/test3.css" %}' type="text/css">
+<script src='{% static "js/photo.js" %}'></script>
+
+<div style = "width:100%; height:50px; background-color:black;">
+</div>
+
+    <div class="jumbotron text-center" style="width: 100%; background-color: #212121;">
+        <h1 style="font-family: 'Dancing Script', cursive; color: white; font-weight: bold; font-size: 100px;">Building Gallery.</h1>
+        <p></p>
+      <a href="/photo" class="btn btn-primary btn-xl page-scroll" style="margin:0px;">사진페이지로</a>
+    </div>
+
+<figure class="snip1141"><img src='{% static "img/photo/건축물/에펠탑.jpg" %}' alt="sq-sample14" style="cursor: pointer;" onclick="doImgPop('{% static "img/photo/건축물/에펠탑.jpg" %}')" />
+  <figcaption>
+    <div class="circle"><i class="ion-ios-plus-empty"> </i></div>
+    <h2>Shufflay</h2>
+  </figcaption>
+</figure>
+<figure class="snip1141"><img src='{% static "img/photo/건축물/1.jpg" %}' alt="sq-sample27" style="cursor: pointer;" onclick="doImgPop('{% static "img/photo/건축물/1.jpg" %}')" />
+  <figcaption>
+    <div class="circle"><i class="ion-ios-plus-empty"> </i></div>
+    <h2>Shufflay</h2>
+  </figcaption>
+</figure>
+<figure class="snip1141"><img src='{% static "img/photo/건축물/2.jpg" %}' alt="sq-sample27" style="cursor: pointer;" onclick="doImgPop('{% static "img/photo/건축물/2.jpg" %}')" />
+  <figcaption>
+    <div class="circle"><i class="ion-ios-plus-empty"> </i></div>
+    <h2>Shufflay</h2>
+  </figcaption>
+</figure>
+<figure class="snip1141"><img src='{% static "img/photo/건축물/3.jpg" %}' alt="sq-sample27" style="cursor: pointer;" onclick="doImgPop('{% static "img/photo/건축물/3.jpg" %}')" />
+  <figcaption>
+    <div class="circle"><i class="ion-ios-plus-empty"> </i></div>
+    <h2>Shufflay</h2>
+  </figcaption>
+</figure>
+<figure class="snip1141"><img src='{% static "img/photo/건축물/4.jpg" %}' alt="sq-sample27" style="cursor: pointer;" onclick="doImgPop('{% static "img/photo/건축물/4.jpg" %}')" />
+  <figcaption>
+    <div class="circle"><i class="ion-ios-plus-empty"> </i></div>
+    <h2>Shufflay</h2>
+  </figcaption>
+</figure>
+<figure class="snip1141"><img src='{% static "img/photo/건축물/5.jpg" %}' alt="sq-sample27" style="cursor: pointer;" onclick="doImgPop('{% static "img/photo/건축물/5.jpg" %}')" />
+  <figcaption>
+    <div class="circle"><i class="ion-ios-plus-empty"> </i></div>
+    <h2>Shufflay</h2>
+  </figcaption>
+</figure>
+<figure class="snip1141"><img src='{% static "img/photo/건축물/6.jpg" %}' alt="sq-sample27" style="cursor: pointer;" onclick="doImgPop('{% static "img/photo/건축물/6.jpg" %}')" />
+  <figcaption>
+    <div class="circle"><i class="ion-ios-plus-empty"> </i></div>
+    <h2>Shufflay</h2>
+  </figcaption>
+</figure>
+<figure class="snip1141"><img src='{% static "img/photo/건축물/7.jpg" %}' alt="sq-sample27" style="cursor: pointer;" onclick="doImgPop('{% static "img/photo/건축물/7.jpg" %}')" />
+  <figcaption>
+    <div class="circle"><i class="ion-ios-plus-empty"> </i></div>
+    <h2>Shufflay</h2>
+  </figcaption>
+</figure>
+<figure class="snip1141"><img src='{% static "img/photo/건축물/8.jpg" %}' alt="sq-sample27" style="cursor: pointer;" onclick="doImgPop('{% static "img/photo/건축물/8.jpg" %}')" />
+  <figcaption>
+    <div class="circle"><i class="ion-ios-plus-empty"> </i></div>
+    <h2>Shufflay</h2>
+  </figcaption>
+</figure>
+
+{% endblock content %}

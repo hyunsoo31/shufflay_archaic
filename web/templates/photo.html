@@ -1,0 +1,102 @@
+{% extends "index.html" %}
+{% load staticfiles %}
+
+{% block content %}
+<link rel="stylesheet" href='{% static "css/test2.css" %}' type="text/css">
+
+<div style = "width:100%; height:50px; background-color:black;">
+</div>
+
+    <div class="jumbotron text-center" style="width: 100%; background-color: #141414; margin-bottom:0px;">
+        <h1 style="font-family: 'Dancing Script', cursive; color: white; font-weight: bold; font-size: 100px;">Gallery Category.</h1>
+        <p></p>
+    </div>
+
+
+    <!-- header -->
+
+    <!-- content -->
+
+
+<figure class="snip1368">
+      <a href="/photo_nature"><img src='{% static "img/photo/자연/가을.jpg" %}' alt="sample30" /></a>
+      <h3>Nature</h3>
+      <figcaption>
+          <div>
+              자연
+          </div>
+
+      </figcaption>
+</figure>
+
+<figure class="snip1368">
+    <a href="/photo_building"><img src='{% static "img/photo/건축물/에펠탑.jpg" %}' alt="sample31" /></a>
+     <h3>Building</h3>
+     <figcaption>
+          <div>
+              건축물
+          </div>
+     </figcaption>
+</figure>
+
+<figure class="snip1368">
+    <a href="/photo_food"><img src='{% static "img/photo/음식/1.jpg" %}' alt="sample35" /></a>
+    <h3>Food</h3>
+    <figcaption>
+          <div>
+              음식
+          </div>
+    </figcaption>
+</figure>
+
+<figure class="snip1368">
+    <a href="/photo_people"><img src='{% static "img/photo/인물/1.jpg" %}' alt="sample35" /></a>
+    <h3>People</h3>
+    <figcaption>
+          <div>
+              인물
+          </div>
+    </figcaption>
+</figure>
+
+<figure class="snip1368">
+    <a href="/photo_animal"><img src='{% static "img/photo/동물/호랑이.jpg" %}' alt="sample35" /></a>
+    <h3>Animal</h3>
+    <figcaption>
+          <div>
+              동물
+          </div>
+    </figcaption>
+</figure>
+
+<figure class="snip1368">
+    <a href="/photo_music"><img src='{% static "img/photo/음악/1.jpg" %}'alt="sample35" /></a>
+    <h3>Music</h3>
+    <figcaption>
+          <div>
+              음악
+          </div>
+    </figcaption>
+</figure>
+
+<figure class="snip1368">
+    <a href="/photo_sport"><img src='{% static "img/photo/스포츠/1.jpg" %}'alt="sample35" /></a>
+    <h3>Sport</h3>
+    <figcaption>
+          <div>
+              스포츠
+          </div>
+    </figcaption>
+</figure>
+
+<figure class="snip1368">
+    <a href="/photo_emotion"><img src='{% static "img/photo/감정/1.jpg" %}'alt="sample35" /></a>
+    <h3>Emotion</h3>
+    <figcaption>
+          <div>
+              감정
+          </div>
+    </figcaption>
+</figure>
+
+{% endblock content %}

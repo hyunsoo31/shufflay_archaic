@@ -1,0 +1,198 @@
+{% extends "base.html" %}<!-- base.html 내용을 상속 받는다-->
+{% load static %}<!-- static 폴더 내용을 불러온다-->
+
+
+{% block content %}
+
+
+    <header>
+        <div class="header-content">
+            <div class="header-content-inner">
+                <a href="/" class="btn btn-primary btn-xl page-scroll back-button">Go Back!</a>
+                <!--
+                <audio id="background-audio" src='{% static "music/speechless.mp3" %}'autoplay controls></audio>
+                -->
+
+
+
+
+                <h1>Shufflay에 오신걸 환영합니다</h1>
+                <!--<iframe src='{% static "music/장범준.mp3" %}' allow="autoplay" id="audio"></iframe>-->
+
+                <hr>
+                <p>Shufflay에서 당신이 원하는 BGM을 찾으세요!<br>Find your BGM :)</br></p>
+
+                <a href="/account" class="btn btn-primary btn-xl page-scroll">계정 관리 바로가기</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-primary" id="about">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">세상의 모든 BGM!</h2>
+                    <hr class="light">
+                    <p class="text-faded">저희 Shufflay에서 찾아볼수 있는 음악들은 모두 저작권 FREE 입니다.<p class="text-faded">저작권 걱정 없이 나만의 영상에 어울리는 음악을 찾아보세요!</p></p>
+                    <!--원래 버튼<a href="#" class="btn btn-default btn-xl">Get Started!</a>-->
+                    <a href="/bgm" class="btn btn-primary btn-xl page-scroll">BGM 바로가기</a>
+                </div>
+            </div>
+        </div>
+    </section>
+<!--
+    <section id="services">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">At Your Service</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-diamond wow bounceIn text-primary"></i>
+                        <h3>Sturdy Templates</h3>
+                        <p class="text-muted">Our templates are updated regularly so they don't break.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-paper-plane wow bounceIn text-primary" data-wow-delay=".1s"></i>
+                        <h3>Ready to Ship</h3>
+                        <p class="text-muted">You can use this theme as is, or you can make changes!</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-newspaper-o wow bounceIn text-primary" data-wow-delay=".2s"></i>
+                        <h3>Up to Date</h3>
+                        <p class="text-muted">We update dependencies to keep things fresh.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-heart wow bounceIn text-primary" data-wow-delay=".3s"></i>
+                        <h3>Made with Love</h3>
+                        <p class="text-muted">You have to make your websites with love these days!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+-->
+    <section class="no-padding" id="portfolio">
+        <div class="container-fluid">
+            <div class="row no-gutter">
+                <div class="col-lg-4 col-sm-6">
+                    <a href="/library" class="portfolio-box">
+                        <img src='{% static "img/portfolio/11.jpg" %}' class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Shufflay
+                                </div>
+                                <div class="project-name">
+                                    라이브러리
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="/photo" class="portfolio-box">
+                        <img src='{% static "img/portfolio/22.jpg" %}'class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Shufflay
+                                </div>
+                                <div class="project-name">
+                                    사진
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="/hot" class="portfolio-box">
+                        <img src='{% static "img/portfolio/33.jpg" %}'class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Shufflay
+                                </div>
+                                <div class="project-name">
+                                    인기 차트
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="/community" class="portfolio-box">
+                        <img src='{% static "img/portfolio/44.jpg" %}' class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Shufflay
+                                </div>
+                                <div class="project-name">
+                                    커뮤니티
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="/upload" class="portfolio-box">
+                        <img src='{% static "img/portfolio/55.jpg" %}' class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Shufflay
+                                </div>
+                                <div class="project-name">
+                                    업로드
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="/customer" class="portfolio-box">
+                        <img src='{% static "img/portfolio/66.jpg" %}'class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Shufflay
+                                </div>
+                                <div class="project-name">
+                                    고객지원
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <aside class="bg-dark">
+        <div class="container text-center">
+            <div class="call-to-action">
+                <h2>Enjoy your Shufflay :)</h2>
+                <a href="#" class="btn btn-default btn-xl wow tada">TOP!</a>
+            </div>
+        </div>
+    </aside>
+
+
+{% endblock content %}
+
